@@ -3,7 +3,8 @@
 ### RitualRivival
 
 ![Paper Plugin](https://img.shields.io/badge/api-Paper-c77dff?labelColor=9b4dca&style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTIgMTJMMjIgMkwxMiAyMkwxMCAxM0wyIDEyWiIgZmlsbD0iI2ZmZmZmZiIvPjxwYXRoIGQ9Ik0xMCAxM0wyMiAyIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMC44IiBvcGFjaXR5PSIwLjMiLz48L3N2Zz4=)
-![SoulGraves Version](https://img.shields.io/github/v/tag/QuacksALotLabs/RitualRevival?label=Version&style=flat-square&color=c77dff&labelColor=9b4dca)
+![RitualRivival Version](https://img.shields.io/github/v/tag/QuacksALotLabs/RitualRevival?label=Version&style=flat-square&color=c77dff&labelColor=9b4dca)
+[![Release](https://img.shields.io/github/actions/workflow/status/QuacksALotLabs/RitualRevival/release.yml?label=Release&style=flat-square&color=c77dff&labelColor=9b4dca&branch=master)](https://github.com/QuacksALotLabs/RitualRevival/actions/workflows/release.yml)
 
 is the revival system of your project: it sends dead players to a configurable limbo waiting area and lets other players bring them back through a multiblock ritual (altar + soul orb). It does not store items itself; instead, it retrieves a player's grave data via the graveId and returns their items upon successful revival. Limbo spawn, ritual structure, and countdown are fully configurable, and the plugin can run standalone or as part of the larger death-to-revival chain.
 
