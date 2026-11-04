@@ -1,0 +1,60 @@
+# ──────────────────────────────────────────────────────────────
+# RitualRevival configuration
+# ──────────────────────────────────────────────────────────────
+# Do not change this value manually – it is managed by the updater.
+config-version: 1
+
+limbo:
+  spawn:
+    world: "world"
+    x: 0.5
+    y: 100.0
+    z: 0.5
+    yaw: 0.0
+    pitch: 0.0
+  gamemode: SPECTATOR
+  allow-flight: true
+  invulnerable: true
+
+ritual:
+  altar:
+    trigger-offset: "0,1,0"
+    blocks:
+      - { offset: "0,0,0",  material: "NETHERITE_BLOCK" }
+      - { offset: "1,0,0",  material: "NETHERITE_BLOCK" }
+      - { offset: "-1,0,0", material: "NETHERITE_BLOCK" }
+      - { offset: "0,0,1",  material: "NETHERITE_BLOCK" }
+      - { offset: "0,0,-1", material: "NETHERITE_BLOCK" }
+      - { offset: "0,1,0",  material: "SOUL_LANTERN" }
+
+  # Item, mit dem der Spieler den Altar aktiviert.
+  trigger-item: "ECHO_SHARD"
+
+  countdown:
+    enabled: true
+    duration-seconds: 10
+    cancel-on-move: true
+    cancel-on-damage: true
+    move-threshold: 0.3
+
+  revive:
+    # OLDEST = ältester Limbo-Spieler zuerst; ALL = alle Limbo-Spieler gleichzeitig
+    mode: "OLDEST"
+    health: 20.0
+    gamemode: SURVIVAL
+    teleport-to-altar: true
+
+messages:
+  prefix: "<gradient:#8b5cf6:#3b82f6>RitualRevival</gradient> <dark_gray>»</dark_gray> "
+  no-permission: "<red>You do not have permission."
+  invalid-altar: "<red>The altar structure is incomplete or incorrect."
+  no-trigger-item: "<red>You must hold an <gold>Echo Shard</gold> to start the ritual."
+  no-one-in-limbo: "<red>There is nobody in limbo to revive."
+  already-running: "<red>A ritual is already in progress here."
+  ritual-start: "<gold>The ritual begins... protect the channeler!"
+  ritual-cancel-move: "<red>Ritual cancelled: you moved."
+  ritual-cancel-damage: "<red>Ritual cancelled: you were damaged."
+  ritual-success: "<green><player> has been revived!"
+  not-in-limbo: "<red>That player is not in limbo."
+  revived-by-command: "<green><player> has been revived by an admin."
+  reloaded: "<green>Configuration reloaded."

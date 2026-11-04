@@ -1,0 +1,15 @@
+name: RitualRevival
+version: ${version}
+main: dev.quacksalot.ritualrevival.RitualRevival
+api-version: '1.21'
+authors: [QuacksALotLabs]
+description: Revive dead players through a multiblock ritual.
+website: https://github.com/QuacksALotLabs/RitualRevival
+
+permissions:
+  ritualrevival.command.use:
+    default: true
+  ritualrevival.admin:
+    default: op
+  ritualrevival.ritual.perform:
+    default: true

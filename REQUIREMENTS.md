@@ -27,7 +27,7 @@ RitualRevival is a Minecraft plugin built exclusively against the **Paper API** 
 - Jackson / JacksonPaper (`implementation`, shaded)
 - MockBukkit + JUnit 5 (`testImplementation`)
 
-## Permissions (`plugin.yml`)
+## Permissions (`paper-plugin.yml`)
 - `ritualrevival.command.use` (default: true)
 - `ritualrevival.admin` (default: op)
 - `ritualrevival.ritual.perform` (default: true)
