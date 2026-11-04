@@ -45,10 +45,13 @@ RitualRevival is a Minecraft plugin built exclusively against the **Paper API** 
 - `ritualrevival.ritual.perform` (default: true)
 
 ## CI/CD
-Same GitHub Actions pattern as SoulGraves:
-- Trigger: `push` on tags matching `v*`
-- JDK 21 (Temurin), `./gradlew build` (or `shadowJar`)
-- GitHub Release via `softprops/action-gh-release@v2`, upload `build/libs/*.jar`
+GitHub Actions workflow (`.github/workflows/release.yml`):
+- Trigger: `push` on tags matching `v[0-9]+.[0-9]+.0` (i.e. only `vX.X.0` releases, patch versions like `v1.0.1` are ignored)
+- JDK 21 (Temurin), `chmod +x ./gradlew`, `./gradlew build` (or `shadowJar`)
+- Create GitHub Release via `softprops/action-gh-release@v2`
+- `generate_release_notes: true` — GitHub automatically generates a changelog summary from commits and PRs since the last release
+- Upload `build/libs/*.jar` as release asset
+- `permissions: contents: write` required for release creation
 
 ## License
 GNU General Public License v3.0 (GPL-3.0). `LICENSE` file in repo root, copyright header in every `.java` file.
